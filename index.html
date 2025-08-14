@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collapsible Sidebar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Lucide Icons (via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav">
+        <a href="#" class="nav-link active">
+          <i data-lucide="home" class="icon"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i data-lucide="users" class="icon"></i>
+          <span>Team</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i data-lucide="file-text" class="icon"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i data-lucide="settings" class="icon"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <button class="toggle-btn" id="toggleBtn">
+        <i data-lucide="menu" class="icon"></i>
+      </button>
+      <div class="content">
+        <h1>Dashboard</h1>
+        <p>Welcome to your dashboard. Click the menu to toggle sidebar.</p>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Revenue</h3>
+              <i data-lucide="dollar-sign" class="icon"></i>
+            </div>
+            <div class="stat-value">$89,450</div>
+            <div class="stat-change positive">
+              <i data-lucide="trending-up" class="icon"></i>
+              <span>12.5% this month</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Users</h3>
+              <i data-lucide="users" class="icon"></i>
+            </div>
+            <div class="stat-value">12,847</div>
+            <div class="stat-change positive">
+              <i data-lucide="trending-up" class="icon"></i>
+              <span>8.2% this month</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Users Table -->
+        <div class="table-section">
+          <h2>Top Users</h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Last Active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Emma Wilson</td>
+                  <td><span class="status active">Active</span></td>
+                  <td>2 min ago</td>
+                </tr>
+                <tr>
+                  <td>James Anderson</td>
+                  <td><span class="status active">Active</span></td>
+                  <td>12 min ago</td>
+                </tr>
+                <tr>
+                  <td>Sophia Martinez</td>
+                  <td><span class="status inactive">Inactive</span></td>
+                  <td>3 days ago</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
